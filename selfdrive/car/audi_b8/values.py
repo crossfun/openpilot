@@ -103,6 +103,6 @@ FINGERPRINTS = {
 #    (Ecu.fwdRadar, 0x757, None): [
 #      b'\xf1\x872Q0907572R \xf1\x890372',
 #      b'\xf1\x872Q0907572T \xf1\x890383',
-    ],
+#    ],
   },
 }
