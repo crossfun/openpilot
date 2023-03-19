@@ -174,8 +174,8 @@ class Controls:
 
     self.startup_event = get_startup_event(car_recognized, controller_available, len(self.CP.carFw) > 0)
 
-    # if not sounds_available:
-    #   self.events.add(EventName.soundsUnavailable, static=True)
+    if not sounds_available:
+      self.events.add(EventName.soundsUnavailable, static=True)
     if community_feature_disallowed and car_recognized and not self.CP.dashcamOnly:
       self.events.add(EventName.communityFeatureDisallowed, static=True)
     if not car_recognized:
@@ -201,7 +201,7 @@ class Controls:
     self.events.clear()
     self.events.add_from_msg(CS.events)
     if not self.dp_jetson:
-      self.events.add_from_msg(self.sm['driverMonitoringState'].events)
+	  self.events.add_from_msg(self.sm['driverMonitoringState'].events)
     self.events.add_from_msg(self.sm['longitudinalPlan'].eventsDEPRECATED)
 
     # Handle startup event
@@ -215,10 +215,10 @@ class Controls:
       return
 
     # Create events for battery, temperature, disk space, and memory
-    # if EON and (self.sm['peripheralState'].pandaType != PandaType.uno) and \
-    #    self.sm['deviceState'].batteryPercent < 1 and self.sm['deviceState'].chargingError:
-    #   # at zero percent battery, while discharging, OP should not allowed
-    #   self.events.add(EventName.lowBattery)
+    if EON and (self.sm['peripheralState'].pandaType != PandaType.uno) and \
+       self.sm['deviceState'].batteryPercent < 1 and self.sm['deviceState'].chargingError:
+      # at zero percent battery, while discharging, OP should not allowed
+      self.events.add(EventName.lowBattery)
     if self.sm['deviceState'].thermalStatus >= ThermalStatus.red:
       self.events.add(EventName.overheat)
     if self.sm['deviceState'].freeSpacePercent < 7 and not SIMULATION:
@@ -280,8 +280,8 @@ class Controls:
 
       if log.PandaState.FaultType.relayMalfunction in pandaState.faults:
         self.events.add(EventName.relayMalfunction)
-
-    # Check for HW or system issues
+		
+	# Check for HW or system issues
     if len(self.sm['radarState'].radarErrors):
       self.events.add(EventName.radarFault)
     elif not self.sm.valid["pandaStates"]:
@@ -359,9 +359,9 @@ class Controls:
         self.events.add(EventName.localizerMalfunction)
 
       # Check if all manager processes are running
-      # not_running = set(p.name for p in self.sm['managerState'].processes if not p.running)
-      # if self.sm.rcv_frame['managerState'] and (not_running - IGNORE_PROCESSES):
-      #   self.events.add(EventName.processNotRunning)
+      not_running = set(p.name for p in self.sm['managerState'].processes if not p.running)
+      if self.sm.rcv_frame['managerState'] and (not_running - IGNORE_PROCESSES):
+        self.events.add(EventName.processNotRunning)
 
     # Only allow engagement with brake pressed when stopped behind another stopped car
     speeds = self.sm['longitudinalPlan'].speeds
@@ -635,7 +635,7 @@ class Controls:
 
     clear_event = ET.WARNING if ET.WARNING not in self.current_alert_types else None
     alerts = self.events.create_alerts(self.current_alert_types, [self.CP, self.sm, self.is_metric, self.soft_disable_timer])
-    self.AM.add_many(self.sm.frame, alerts)
+    self.AM.add_many(self.sm.frame, alerts, self.enabled)
     self.AM.process_alerts(self.sm.frame, clear_event)
     CC.hudControl.visualAlert = self.AM.visual_alert
 

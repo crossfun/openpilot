@@ -32,18 +32,9 @@ class CarInterface(CarInterfaceBase):
       ret.safetyConfigs = [get_safety_config(car.CarParams.SafetyModel.audiB8)]
       ret.enableBsm = 0x30F in fingerprint[0]  # SWA_01
 
-      if 0xAD in fingerprint[0]:  # Getriebe_11
-        ret.transmissionType = TransmissionType.automatic
-      elif 0x187 in fingerprint[0]:  # EV_Gearshift
-        ret.transmissionType = TransmissionType.direct
-      else:
-        ret.transmissionType = TransmissionType.manual
-
-      if any(msg in fingerprint[1] for msg in [0x40, 0x86, 0xB2, 0xFD]):  # Airbag_01, LWI_01, ESP_19, ESP_21
-        ret.networkLocation = NetworkLocation.gateway
-      else:
-        ret.networkLocation = NetworkLocation.fwdCamera
-
+      ret.transmissionType = TransmissionType.direct
+      ret.networkLocation = NetworkLocation.gateway
+	  
     # Global lateral tuning defaults, can be overridden per-vehicle
 
     ret.steerActuatorDelay = 0.05
@@ -62,7 +53,7 @@ class CarInterface(CarInterfaceBase):
     if candidate == CAR.AUDI_A5_B8:
       ret.mass = 1733 + STD_CARGO_KG
       ret.wheelbase = 2.84
-	  
+		
     else:
       raise ValueError("unsupported car %s" % candidate)
 
@@ -112,8 +103,6 @@ class CarInterface(CarInterfaceBase):
     # Vehicle health and operation safety checks
     if self.CS.parkingBrakeSet:
       events.add(EventName.parkBrake)
-    if self.CS.tsk_status in [6, 7]:
-      events.add(EventName.accFaulted)
 
     # Low speed steer alert hysteresis logic
     if self.CP.minSteerSpeed > 0. and ret.vEgo < (self.CP.minSteerSpeed + 1.):
