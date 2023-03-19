@@ -21,10 +21,10 @@ class CarState(CarStateBase):
     ret = car.CarState.new_message()
     # Update vehicle speed and acceleration from ABS wheel speeds.
     ret.wheelSpeeds = self.get_wheel_speeds(
-    ret.wheelSpeeds.fl = pt_cp.vl["ESP_19"]["ESP_VL_Radgeschw_02"] * CV.KPH_TO_MS
-    ret.wheelSpeeds.fr = pt_cp.vl["ESP_19"]["ESP_VR_Radgeschw_02"] * CV.KPH_TO_MS
-    ret.wheelSpeeds.rl = pt_cp.vl["ESP_19"]["ESP_HL_Radgeschw_02"] * CV.KPH_TO_MS
-    ret.wheelSpeeds.rr = pt_cp.vl["ESP_19"]["ESP_HR_Radgeschw_02"] * CV.KPH_TO_MS
+      pt_cp.vl["ESP_19"]["ESP_VL_Radgeschw_02"],
+      pt_cp.vl["ESP_19"]["ESP_VR_Radgeschw_02"],
+      pt_cp.vl["ESP_19"]["ESP_HL_Radgeschw_02"],
+      pt_cp.vl["ESP_19"]["ESP_HR_Radgeschw_02"],
     )
 
     ret.vEgoRaw = float(np.mean([ret.wheelSpeeds.fl, ret.wheelSpeeds.fr, ret.wheelSpeeds.rl, ret.wheelSpeeds.rr]))
