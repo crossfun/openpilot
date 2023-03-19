@@ -606,7 +606,7 @@ BO_ 2549088284 KN_SAK: 8 SAK_MQB
  SG_ SAK_Nachlauftyp : 4|4@1+ (1,0) [0|15] "" Gateway_MQB
  SG_ SAK_KD_Fehler : 63|1@1+ (1,0) [0|1] "" Gateway_MQB
 
-BO_ 779 Kombi_01: 8 Gateway_MQB
+BO_ 1779 Kombi_01: 8 Gateway_MQB
  SG_ KBI_ABS_Lampe : 0|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ KBI_ESP_Lampe : 1|1@1+ (1,0) [0|1] "" Vector__XXX
  SG_ KBI_BKL_Lampe : 2|1@1+ (1,0) [0|1] "" Vector__XXX
