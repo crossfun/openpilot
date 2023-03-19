@@ -111,10 +111,10 @@ class CarState(CarStateBase):
       # ACC okay and enabled, currently regulating speed (3) or driver accel override (4) or overrun coast-down (5)
       ret.cruiseState.available = True
       ret.cruiseState.enabled = True
-    else:
-      # ACC okay but disabled (1), or a radar visibility or other fault/disruption (6 or 7)
-      ret.cruiseState.available = False
-      ret.cruiseState.enabled = False
+#    else:
+#      # ACC okay but disabled (1), or a radar visibility or other fault/disruption (6 or 7)
+#      ret.cruiseState.available = False
+#      ret.cruiseState.enabled = False
     # dp
     ret.cruiseActualEnabled = ret.cruiseState.enabled
 
