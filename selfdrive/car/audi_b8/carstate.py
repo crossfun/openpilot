@@ -56,14 +56,13 @@ class CarState(CarStateBase):
     # Update gear and/or clutch position data.
     if trans_type == TransmissionType.automatic:
       ret.gearShifter = self.parse_gear_shifter(self.shifter_values.get(pt_cp.vl["Getriebe_11"]["GE_Fahrstufe"], None))
-    elif trans_type == TransmissionType.direct:
-    else:																					   
+    elif trans_type == TransmissionType.direct:																		   
       ret.gearShifter = self.parse_gear_shifter(self.shifter_values.get(pt_cp.vl["TSK_01"]["GearPosition"], None))
     elif trans_type == TransmissionType.manual:
       ret.clutchPressed = not pt_cp.vl["Motor_14"]["MO_Kuppl_schalter"]
-	 if bool(pt_cp.vl["Gateway_72"]["BCM1_Rueckfahrlicht_Schalter"]):
-       ret.gearShifter = GearShifter.reverse
-       else:
+	  if bool(pt_cp.vl["Gateway_72"]["BCM1_Rueckfahrlicht_Schalter"]):
+        ret.gearShifter = GearShifter.reverse
+      else:
         ret.gearShifter = GearShifter.drive
 
     # Update door and trunk/hatch lid open status.
