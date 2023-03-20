@@ -201,8 +201,8 @@ class Controls:
     self.events.clear()
     self.events.add_from_msg(CS.events)
     if not self.dp_jetson:
-	  self.events.add_from_msg(self.sm['driverMonitoringState'].events)
-	  self.events.add_from_msg(self.sm['longitudinalPlan'].eventsDEPRECATED)
+      self.events.add_from_msg(self.sm['driverMonitoringState'].events)
+    self.events.add_from_msg(self.sm['longitudinalPlan'].eventsDEPRECATED)
 
     # Handle startup event
     if self.startup_event is not None:
