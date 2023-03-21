@@ -261,7 +261,7 @@ struct CarState {
   }
 
   errorsDEPRECATED @0 :List(CarEvent.EventName);
-  brakeLights @19 :Bool;
+  brakeLightsDEPRECATED @19 :Bool;
 }
 
 # ******* radar state @ 20hz *******
@@ -547,8 +547,7 @@ struct CarParams {
     hyundaiLegacy @23;
     hyundaiCommunity @24;
     stellantis @25;
-	audiB8 @26;
-		   
+    audiB8 @26;
   }
 
   enum SteerControlType {
