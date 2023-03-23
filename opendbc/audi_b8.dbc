@@ -843,5 +843,4 @@ CM_ SG_ 960 ZAS_Kl_15 "Indicates ignition on";
 CM_ SG_ 1318 ZV_FT_offen "Door open signal was not found on extended CAN. Using the interior light state as indicator instead.";
 
 VAL_ 159 EPS_HCA_Status 0 "disabled" 1 "initializing" 2 "fault" 3 "ready" 4 "rejected" 5 "active";
-VAL_ 173 GE_Fahrstufe 5 "P" 6 "R" 7 "N" 8 "D" 9 "S" 10 "E" 14 "T";
 VAL_ 266 GearPosition 0 "D" 1 "N";
