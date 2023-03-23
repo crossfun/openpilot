@@ -436,20 +436,6 @@ BO_ 869 BEM_05: 8 Gateway_MQB
  SG_ BEM_HYB_DC_uSollLV : 50|6@1+ (0.1,10.6) [10.6|16] "Unit_Volt" LEH_MQB
  SG_ BEM_HYB_DC_uMinLV : 56|8@1+ (0.1,0) [0|25.3] "Unit_Volt" LEH_MQB
 
-BO_ 1628 BMS_Hybrid_01: 8 BMS_MQB
- SG_ BMS_HYB_ASV_hinten_Status : 13|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ BMS_HYB_ASV_vorne_Status : 14|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ BMS_HYB_KD_Fehler : 15|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ BMS_HYB_BattFanSpd : 16|4@1+ (10,0) [0|100] "Unit_PerCent" Gateway_MQB
- SG_ BMS_HYB_VentilationReq : 20|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ BMS_HYB_Spuelbetrieb_Status : 21|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ BMS_HYB_Kuehlung_Anf : 22|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ BMS_HYB_Temp_vor_Verd : 24|8@1+ (0.5,-40) [-40|86.5] "Unit_DegreCelsi" Gateway_MQB
- SG_ BMS_HYB_Temp_nach_Verd : 32|8@1+ (0.5,-40) [-40|86.5] "Unit_DegreCelsi" Gateway_MQB
- SG_ BMS_Temperatur : 40|8@1+ (0.5,-40) [-40|86.5] "Unit_DegreCelsi" Gateway_MQB
- SG_ BMS_Temperatur_Ansaugluft : 48|8@1+ (0.5,-40) [-40|86.5] "Unit_DegreCelsi" Gateway_MQB
- SG_ BMS_IstSpannung_HV : 56|8@1+ (1,100) [100|350] "Unit_Volt" Gateway_MQB
-
 BO_ 901 Charisma_01: 8 Gateway_MQB
  SG_ CHA_Ziel_FahrPr_ALR : 0|4@1+ (1,0) [0|15] "" Vector__XXX
  SG_ CHA_Ziel_FahrPr_ESP : 4|4@1+ (1,0) [0|15] "" Vector__XXX
@@ -467,17 +453,6 @@ BO_ 901 Charisma_01: 8 Gateway_MQB
  SG_ CHA_Ziel_FahrPr_ACC : 52|4@1+ (1,0) [0|15] "" Vector__XXX
  SG_ CHA_Ziel_FahrPr_SAK : 56|4@1+ (1,0) [0|15] "" SAK_MQB
  SG_ CHA_Ziel_FahrPr_MStSt : 60|4@1+ (1,0) [0|15] "" Vector__XXX
-
-BO_ 945 DC_Hybrid_01: 8 LEH_MQB
- SG_ DC_HYB_iAktLV : 12|10@1+ (1,-511) [-511|510] "Unit_Amper" Gateway_MQB
- SG_ DC_HYB_iAktReserveLV : 22|10@1+ (1,-511) [-511|510] "Unit_Amper" Gateway_MQB
- SG_ DC_HYB_uAktLV : 32|8@1+ (0.1,0) [0|25.3] "Unit_Volt" Gateway_MQB
- SG_ DC_HYB_LangsRegelung : 40|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ DC_HYB_Abregelung_Temperatur : 41|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ DC_HYB_Fehler_RedLeistung : 42|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ DC_HYB_Fehler_intern : 43|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ DC_HYB_Fehler_Spannung : 44|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ DC_HYB_Auslastungsgrad : 56|8@1+ (0.4,0) [0|100] "Unit_PerCent" Gateway_MQB
 
 BO_ 1714 Diagnose_01: 8 Gateway_MQB
  SG_ DGN_Verlernzaehler : 0|8@1+ (1,0) [0|254] "" Airbag_MQB,BMS_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB,SAK_MQB
@@ -582,82 +557,6 @@ BO_ 989 Gateway_74: 8 Gateway_MQB
  SG_ MFL_Tip_Up : 57|1@1+ (1,0) [0|1] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
  SG_ LS_Tiptronic_Fehler : 58|1@1+ (1,0) [0|1] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
 
-BO_ 296 Getriebe_06: 3 Getriebe_DQ_Hybrid_MQB
- SG_ GE_WH_Sperre : 0|1@1+ (1,0) [0|1] "" Waehlhebel_MQB
- SG_ GE_Ausleuchtungsmode : 1|1@1+ (1,0) [0|1] "" Waehlhebel_MQB
- SG_ GE_Test_Freigabe : 2|1@1+ (1,0) [0|1] "" Waehlhebel_MQB
- SG_ GE_Ist_Fahrstufe : 4|4@1+ (1,0) [0|15] "" Waehlhebel_MQB
- SG_ GE_Testparameter_1 : 8|8@1+ (1,0) [0|255] "" Waehlhebel_MQB
- SG_ GE_Testparameter_2 : 16|8@1+ (1,0) [0|255] "" Waehlhebel_MQB
-
-BO_ 173 Getriebe_11: 8 Getriebe_DQ_Hybrid_MQB
- SG_ COUNTERXX : 8|4@1+ (1,0) [0|15] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_MMom_Soll_02 : 12|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_MMom_Vorhalt_02 : 22|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Uefkt : 32|10@1+ (0.1,0) [0|102.2] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Fahrstufe : 42|5@1+ (1,0) [0|31] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Schaltvorgang : 47|1@1+ (1,0) [0|1] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Status_Kupplung : 54|2@1+ (1,0) [0|3] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_MMom_Status : 56|2@1+ (1,0) [0|3] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Freig_MMom_Vorhalt : 58|1@1+ (1,0) [0|1] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Verbot_Ausblendung : 59|1@1+ (1,0) [0|1] "" Gateway_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Zielgang : 60|4@1+ (1,0) [0|15] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
-
-BO_ 174 Getriebe_12: 8 Getriebe_DQ_Hybrid_MQB
- SG_ Getriebe_12_CRC : 0|8@1+ (1,0) [0|255] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ Getriebe_12_BZ : 8|4@1+ (1,0) [0|15] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Drehzahlmesser_Daempfung : 12|1@1+ (1,0) [0|1] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Schubabschalt_Unt : 13|1@1+ (1,0) [0|1] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Freigabe_Synchro : 14|1@1+ (1,0) [0|1] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Synchro_Wunschdrehz : 15|9@1+ (25,0) [0|12750] "Unit_MinutInver" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Synchro_Zeit : 24|8@1+ (20,0) [0|5080] "Unit_MilliSecon" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Mom_Begr_Gradient : 32|8@1+ (10,0) [0|2540] "Unit_NewtoMeterPerSecon" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Anheb_Solldrehz_Leerlauf : 40|8@1+ (10,0) [0|2540] "Unit_MinutInver" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Aufnahmemoment : 48|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Anf_Zylabsch : 58|2@1+ (1,0) [0|3] "" Vector__XXX
- SG_ GE_HYB_DZ_Eingriff : 62|2@1+ (1,0) [0|3] "" Motor_Hybrid_MQB
-
-BO_ 301 Getriebe_13: 8 Getriebe_DQ_Hybrid_MQB
- SG_ Getriebe_13_CRC : 0|8@1+ (1,0) [0|255] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ Getriebe_13_BZ : 8|4@1+ (1,0) [0|15] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_StartStopp_Info : 12|2@1+ (1,0) [0|3] "" Motor_Diesel_MQB,Motor_Otto_MQB
- SG_ GE_Langfr_Schutzmom_02 : 14|9@1+ (1,0) [0|509] "Unit_NewtoMeter" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Eingangsdrehz : 48|14@1+ (1,0) [0|16381] "Unit_MinutInver" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Notlauf : 62|1@1+ (1,0) [0|1] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Freig_Langfr_Schutzmom : 63|1@1+ (1,0) [0|1] "" Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
-
-BO_ 968 Getriebe_14: 8 Getriebe_DQ_Hybrid_MQB
- SG_ GE_OBD_AbsperrVent : 12|4@1+ (1,0) [0|15] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_amax_moeglich : 16|9@1+ (0.024,-2.016) [-2.016|10.224] "Unit_MeterPerSeconSquar" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Charisma_FahrPr : 25|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ GE_Charisma_Status : 29|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ GE_Verlustmoment : 32|8@1+ (1,0) [0|254] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Freigabe_Verfallsinfo_WFS : 49|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ GE_Codierung_MSG : 50|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ GE_LaunchControl : 51|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ GE_Heizwunsch : 52|2@1+ (1,0) [0|3] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_OBD_Status : 54|1@1+ (1,0) [0|1] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_LFR_Adaption : 55|1@1+ (1,0) [0|1] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
- SG_ GE_Sumpftemperatur : 56|8@1+ (1,-58) [-58|196] "Unit_DegreCelsi" Gateway_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
-
-BO_ 158 Getriebe_Hybrid_01: 8 Getriebe_DQ_Hybrid_MQB
- SG_ Getriebe_Hybrid_01_CRC : 0|8@1+ (1,0) [0|255] "" Motor_Hybrid_MQB
- SG_ Getriebe_Hybrid_01_BZ : 8|4@1+ (1,0) [0|15] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Fehlerstatus : 12|2@1+ (1,0) [0|3] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Freigabe_K0 : 16|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Freigabe_LL_Reg : 17|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Freig_sSchl_K0 : 18|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Freig_VM_EM_Stop : 19|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Wiederstart : 20|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_Filt_MomAufbau : 21|3@1+ (1,0) [0|7] "" Motor_Hybrid_MQB
- SG_ GE_HYB_nK0 : 24|8@1+ (25,0) [0|6350] "Unit_MinutInver" Vector__XXX
- SG_ GE_HYB_MomEingriff_EM : 32|6@1+ (0.5,0) [0|31.5] "Unit_NewtoMeter" LEH_MQB
- SG_ GE_HYB_VZ_MomEingriff_EM : 38|1@1+ (1,0) [0|1] "" LEH_MQB
- SG_ GE_HYB_Sportfaktor : 56|4@1+ (1,0) [0|15] "" Motor_Hybrid_MQB
- SG_ GE_HYB_VM_akt_halten : 61|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_StartAnf : 62|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
- SG_ GE_HYB_VM_Startkontr : 63|1@1+ (1,0) [0|1] "" Motor_Hybrid_MQB
-
 BO_ 960 Klemmen_Status_01: 4 Gateway_MQB
  SG_ COUNTER : 8|4@1+ (1,0) [0|15] "" Airbag_MQB,BMS_MQB,Motor_Diesel_MQB,Motor_Hybrid_MQB,Motor_Otto_MQB
  SG_ ZAS_Kl_S : 16|1@1+ (1,0) [0|1] "" Vector__XXX
@@ -753,179 +652,6 @@ BO_ 263 Motor_04: 8 Motor_Diesel_MQB
  SG_ MO_KVS : 48|15@1+ (1,0) [0|32767] "Unit_MicroLiter" Gateway_MQB
  SG_ MO_KVS_Ueberlauf : 63|1@1+ (1,0) [0|1] "" Gateway_MQB
 
-BO_ 1600 Motor_07: 8 Motor_Diesel_MQB
- SG_ MO_QBit_Ansaugluft_Temp : 0|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_QBit_Oel_Temp : 1|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_QBit_Kuehlmittel_Temp : 2|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB
- SG_ MO_Stellgliedtest_Soundaktuator : 3|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Fehler_HV_Netz : 4|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_aktives_Getriebeheizen : 5|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Absperrventil_oeffnen : 6|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Ansaugluft_Temp : 8|8@1+ (0.75,-48) [-48|141.75] "Unit_DegreCelsi" Gateway_MQB
- SG_ MO_Oel_Temp : 16|8@1+ (1,-60) [-60|192] "Unit_DegreCelsi" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Kuehlmittel_Temp : 24|8@1+ (0.75,-48) [-48|141.75] "Unit_DegreCelsi" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB
- SG_ MO_Hoeheninfo : 32|8@1+ (0.00781,0) [0|1.98374] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Kennfeldk : 40|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Versionsinfo : 41|6@1+ (1,0) [0|63] "" Gateway_MQB
- SG_ MO_Getriebe_kuehlen : 47|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Mom_Traegheit_02 : 48|5@1+ (0.01,0) [0|0.31] "Unit_KiloGramMeterSquar" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Heizungspumpenansteuerung : 53|4@1+ (10,0) [0|100] "Unit_PerCent" Gateway_MQB
- SG_ MO_SpannungsAnf : 57|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Nachlaufzeit_Heizungspumpe : 58|6@1+ (15,0) [0|945] "Unit_Secon" Gateway_MQB
-
-BO_ 1607 Motor_09: 8 Motor_Diesel_MQB
- SG_ MO_ITM_Kuehlmittel_Temp : 0|8@1+ (0.75,-48) [-45.75|143.25] "Unit_DegreCelsi" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_E85_Sensor : 8|4@1+ (10,0) [0|100] "Unit_PerCent" Gateway_MQB
- SG_ SCR_Anz_Motorstarts : 12|4@1+ (1,0) [0|8] "" Gateway_MQB
- SG_ SCR_Reichweite : 16|15@1+ (1,0) [0|32766] "" Gateway_MQB
- SG_ SCR_Warnstufe_1 : 32|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ SCR_Warnstufe_2 : 33|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ SCR_Text : 34|3@1+ (1,0) [0|7] "" Gateway_MQB
- SG_ SCR_Akustik : 37|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Kraftstofffilter_Wasser : 40|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ SCR_Systemfehler : 41|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ SCR_Inducement_Strategie : 42|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_CO2_Faktor : 44|12@1+ (1,0) [1|4094] "Unit_GramPerLiter" Gateway_MQB
-
-BO_ 167 Motor_11: 8 Motor_Diesel_MQB
- SG_ Motor_11_CRC : 0|8@1+ (1,0) [0|255] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ Motor_11_BZ : 8|4@1+ (1,0) [0|15] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Mom_Soll_Roh : 12|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Mom_Ist_Summe : 22|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,SAK_MQB
- SG_ MO_Mom_Traegheit_Summe : 32|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Mom_Soll_gefiltert : 42|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Mom_Schub : 52|9@1+ (1,-509) [-509|0] "Unit_NewtoMeter" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Status_Normalbetrieb_01 : 61|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_erste_Ungenauschwelle : 62|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_QBit_Motormomente : 63|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
-
-BO_ 168 Motor_12: 8 Motor_Diesel_MQB
- SG_ Motor_12_CRC : 0|8@1+ (1,0) [0|255] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB
- SG_ Motor_12_BZ : 8|4@1+ (1,0) [0|15] "" BMS_MQB,Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB
- SG_ MO_Mom_neg_verfuegbar : 12|9@1+ (1,-509) [-509|0] "Unit_NewtoMeter" Gateway_MQB
- SG_ MO_Mom_Begr_stat : 21|9@1+ (1,0) [0|509] "Unit_NewtoMeter" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Mom_Begr_dyn : 30|10@1+ (1,-509) [-509|509] "Unit_NewtoMeter" Gateway_MQB
- SG_ MO_Momentenintegral_02 : 40|7@1+ (1,0) [0|100] "Unit_PerCent" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_QBit_Drehzahl_01 : 47|1@1+ (1,0) [0|1] "" BMS_MQB,Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB
- SG_ MO_Drehzahl_01 : 48|16@1+ (0.25,0) [0|16383] "Unit_MinutInver" BMS_MQB,Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB,LEH_MQB,SAK_MQB
-
-BO_ 958 Motor_14: 8 Motor_Diesel_MQB
- SG_ MO_StartStopp_Status : 12|2@1+ (1,0) [0|3] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_StartStopp_Wiederstart : 14|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_StartStopp_Motorstopp : 15|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Freig_Reku : 16|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Kl_75 : 18|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Kl_50 : 19|1@1+ (1,0) [0|1] "" Gateway_MQB,LEH_MQB
- SG_ MO_Gangposition : 20|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ MO_StartStopp_Fahrerwunsch : 24|2@1+ (1,0) [0|3] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_HYB_Fahrbereitschaft : 26|1@1+ (1,0) [0|1] "" BMS_MQB,Gateway_MQB
- SG_ MO_Ext_E_Fahrt_aktiv : 27|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Fahrer_bremst : 28|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_QBit_Fahrer_bremst : 29|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_BLS : 30|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Konsistenz_Bremsped : 31|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Timeout_ESP : 32|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Klima_Eingr : 33|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Aussp_Anlass : 35|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Freig_Anlass : 36|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Kuppl_schalter : 37|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Interlock : 38|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Motor_laeuft : 39|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Kickdown : 40|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Status_Zylabschalt_01 : 41|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_EKlKomLeiRed : 42|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Handshake_STH : 44|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_BKV_Unterdruckwarnung : 45|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Freigabe_Segeln : 46|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_PTC_Status : 47|3@1+ (1,0) [0|7] "" Gateway_MQB
- SG_ MO_QBit_Gangposition : 50|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Signalquelle_Gangposition : 51|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Remotestart_Betrieb : 52|1@1+ (1,0) [0|1] "" Gateway_MQB
-
-BO_ 1631 Motor_16: 8 Motor_Diesel_MQB
- SG_ TSK_QBit_Steigung : 12|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ TSK_QBit_Fahrzeugmasse : 13|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_SpannungsAnf_02 : 14|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_DPF_reg : 16|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Heizstrom_EKAT : 17|7@1+ (1,0) [0|126] "Unit_Amper" Gateway_MQB
- SG_ MO_Heizstrom_SCR : 24|6@1+ (1,0) [0|62] "Unit_Amper" Gateway_MQB
- SG_ TSK_Fahrzeugmasse_02 : 48|8@1+ (32,0) [0|8128] "Unit_KiloGram" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ TSK_Steigung : 56|8@1+ (0.8,-101.6) [-101.6|101.6] "Unit_PerCent" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
-
-BO_ 812 Motor_17: 8 Motor_Diesel_MQB
- SG_ MO_Prio_MAX_Wunschdrehzahl : 12|1@1+ (1,0) [0|1] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Prio_MIN_Wunschdrehzahl : 13|1@1+ (1,0) [0|1] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Luftpfad_aktiv : 14|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ MO_v_Begrenz_Aktivierbar : 15|1@1+ (1,0) [0|1] "" Vector__XXX
- SG_ MO_Drehzahlbeeinflussung : 16|8@1+ (0.39,0) [0|99.45] "Unit_PerCent" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_MIN_Wunschdrehzahl : 24|8@1+ (25,0) [0|6350] "Unit_MinutInver" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_MAX_Wunschdrehzahl : 32|9@1+ (25,0) [0|12750] "Unit_MinutInver" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Charisma_FahrPr : 41|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ MO_Charisma_Status : 45|2@1+ (1,0) [0|3] "" Gateway_MQB
-
-BO_ 1648 Motor_18: 8 Motor_Diesel_MQB
- SG_ MO_Hybrid_StartStopp_LED : 43|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Eis_Offroad_LED : 45|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Anzahl_Abgesch_Zyl : 47|3@1+ (1,0) [0|7] "" Gateway_MQB
- SG_ MO_Zylabsch_Texte : 50|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_E85_BS_Texte : 52|3@1+ (1,0) [0|7] "" Gateway_MQB
- SG_ MO_Drehzahl_Warnung : 55|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_obere_Drehzahlgrenze : 56|8@1+ (50,0) [50|12750] "Unit_MinutInver" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
-
-BO_ 967 Motor_26: 8 Motor_Diesel_MQB
- SG_ MO_HYB_Status_HV_Ladung : 8|3@1+ (1,0) [0|7] "" Gateway_MQB
- SG_ WIV_Anzeige_aktiv : 12|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Oelmin_Warn : 13|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Sensorfehler : 14|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Schieflage : 15|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Oelstand : 16|4@1+ (12.5,0) [0|100] "Unit_PerCent" Gateway_MQB
- SG_ MO_Zustand_HWP : 20|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ WIV_Oelsystem_aktiv : 24|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_nicht_betriebswarm : 25|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Ueberfuell_Warn : 26|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_laufender_Motor : 27|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Text_1 : 28|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Text_2 : 29|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Text_3 : 30|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Text_4 : 31|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Text_Motorstart : 32|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ MO_HYB_Text_5 : 36|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Text_6 : 37|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_HYB_Text_7 : 38|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Text_Partikelfil_Reg : 41|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Oelmenge : 43|5@1+ (125,0) [0|3875] "Unit_MilliLiter" Gateway_MQB
- SG_ MO_Systemlampe : 48|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_OBD2_Lampe : 49|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Heissleuchte : 50|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Partikel_Lampe : 51|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Winterfahrprog : 52|1@1+ (1,0) [0|1] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ WIV_Oelstand_nicht_vorhanden : 53|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_nachfuellanzeige_ein : 54|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Ueberfuell_deaktiv : 55|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Unterfuell_Warn : 56|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Tankdeckel_Lampe : 57|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Text_Tankdeckelwarn : 58|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WIV_Oeldr_Warn_Motor : 60|1@1+ (1,0) [0|1] "" Gateway_MQB
-
-BO_ 1601 Motor_Code_01: 8 Motor_Diesel_MQB
- SG_ Motor_Code_01_CRC : 0|8@1+ (1,0) [0|255] "" Gateway_MQB
- SG_ Motor_Code_01_BZ : 8|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ MO_Faktor_Momente_02 : 12|2@1+ (1,0) [0|3] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Hybridfahrzeug : 14|2@1+ (1,0) [0|3] "" Gateway_MQB
- SG_ MO_Code : 16|8@1+ (1,0) [0|255] "" Gateway_MQB,SAK_MQB
- SG_ MO_Getriebe_Code : 24|6@1+ (1,0) [0|63] "" Gateway_MQB
- SG_ MO_StartStopp_Codiert : 30|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Anzahl_Zyl : 32|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ MO_Kraftstoffart : 36|4@1+ (1,0) [0|15] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Hubraum : 40|7@1+ (0.1,0) [0|12.7] "Unit_Liter" Gateway_MQB
- SG_ MO_Ansaugsystem : 47|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ MO_Leistung : 48|9@1+ (1,0) [0|511] "Unit_KiloWatt" Gateway_MQB
- SG_ MO_Abgastyp_EOBD : 57|1@1+ (1,0) [0|1] "" BMS_MQB,Gateway_MQB,LEH_MQB
- SG_ MO_Abgastyp_OBD : 58|1@1+ (1,0) [0|1] "" BMS_MQB,Gateway_MQB,LEH_MQB
- SG_ MO_DPF_verbaut : 59|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ TSK_Codierung : 60|3@1+ (1,0) [0|7] "" Gateway_MQB,Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
- SG_ MO_Einspritzart : 63|1@1+ (1,0) [0|1] "" Gateway_MQB
-
 BO_ 1630 OBD_Tankgeber_01: 8 Gateway_MQB
  SG_ OBD_TG_F_Status_1 : 0|4@1+ (1,0) [0|15] "" Motor_Hybrid_MQB,Motor_Otto_MQB
  SG_ OBD_TG_F_Status_2 : 4|4@1+ (1,0) [0|15] "" Motor_Hybrid_MQB,Motor_Otto_MQB
@@ -1020,17 +746,6 @@ BO_ 175 Waehlhebel_03: 4 Waehlhebel_MQB
  SG_ WH_Testergebnis : 16|8@1+ (1,0) [0|255] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
  SG_ WH_Test_Aktiv : 24|1@1+ (1,0) [0|1] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
  SG_ WH_Status : 25|7@1+ (1,0) [0|127] "" Getriebe_DQ_Hybrid_MQB,Getriebe_DQ_MQB
-
-BO_ 916 WBA_03: 8 Getriebe_DQ_Hybrid_MQB
- SG_ WBA_03_CRC : 0|8@1+ (1,0) [0|255] "" Gateway_MQB
- SG_ WBA_03_BZ : 8|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ WBA_Fahrstufe_02 : 12|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ WBA_ZielFahrstufe : 16|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ WBA_GE_Warnung_02 : 20|4@1+ (1,0) [0|15] "" Gateway_MQB
- SG_ WBA_eing_Gang_02 : 24|4@1+ (1,0) [0|15] "" Gateway_MQB,Motor_Diesel_MQB,Motor_Otto_MQB
- SG_ WBA_GE_Texte : 28|3@1+ (1,0) [0|7] "" Gateway_MQB
- SG_ WBA_Segeln_aktiv : 31|1@1+ (1,0) [0|1] "" Gateway_MQB
- SG_ WBA_Schaltschema : 32|5@1+ (1,0) [0|31] "" Gateway_MQB
 
 BO_ 286 VehicleSpeed: 8 XXX
  SG_ VehicleSpeed_CRC : 0|8@1+ (1,0) [0|255] "" XXX
