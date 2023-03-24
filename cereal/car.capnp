@@ -586,9 +586,11 @@ struct CarParams {
     hyundaiLegacy @23;
     hyundaiCommunity @24;
     stellantisDEPRECATED @25;  # Consolidated with Chrysler; may be recycled for the next new model
-    hongqi @26;
+	audiB8 @26;
     body @27;
     hyundaiCanfd @28;
+	hongqi @29;
+
   }
 
   enum SteerControlType {
