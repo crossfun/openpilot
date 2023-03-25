@@ -68,11 +68,11 @@ class CarState(CarStateBase):
 #        ret.gearShifter = GearShifter.drive
 
     # Update door and trunk/hatch lid open status.
-    ret.doorOpen = any([pt_cp.vl["Gateway_72"]["ZV_FT_offen"],
-                        pt_cp.vl["Gateway_72"]["ZV_BT_offen"],
-                        pt_cp.vl["Gateway_72"]["ZV_HFS_offen"],
-                        pt_cp.vl["Gateway_72"]["ZV_HBFS_offen"],
-                        pt_cp.vl["Gateway_72"]["ZV_HD_offen"]])
+    ret.doorOpen = any([pt_cp.vl["Gateway_72"]["ZV_FT_offen"]])
+#                        pt_cp.vl["Gateway_72"]["ZV_BT_offen"],
+#                        pt_cp.vl["Gateway_72"]["ZV_HFS_offen"],
+#                        pt_cp.vl["Gateway_72"]["ZV_HBFS_offen"],
+#                        pt_cp.vl["Gateway_72"]["ZV_HD_offen"]])
 
     # Update seatbelt fastened status.
     ret.seatbeltUnlatched = pt_cp.vl["Airbag_02"]["AB_Gurtschloss_FA"] != 3
