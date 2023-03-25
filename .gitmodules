@@ -1,4 +1,0 @@
-[submodule "Panda"]
-	path = panda
-	url = https://github.com/crossfun/panda.git
-	branch = audi_b8
