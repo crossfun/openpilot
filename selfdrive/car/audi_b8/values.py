@@ -35,7 +35,7 @@ class CANBUS:
 
 class DBC_FILES:
   audi_b8 = "audi_b8"  # Used for Audi A5 B8 and B8.5
-  
+
 DBC = defaultdict(lambda: dbc_dict(DBC_FILES.audi_b8, None))  # type: Dict[str, Dict[str, str]]
 
 BUTTON_STATES = {
@@ -46,23 +46,6 @@ BUTTON_STATES = {
   "resumeCruise": False,
   "gapAdjustCruise": False
 }
-
-MQB_LDW_MESSAGES = {
-  "none": 0,                            # Nothing to display
-  "laneAssistUnavailChime": 1,          # "Lane Assist currently not available." with chime
-  "laneAssistUnavailNoSensorChime": 3,  # "Lane Assist not available. No sensor view." with chime
-  "laneAssistTakeOverUrgent": 4,        # "Lane Assist: Please Take Over Steering" with urgent beep
-  "emergencyAssistUrgent": 6,           # "Emergency Assist: Please Take Over Steering" with urgent beep
-  "laneAssistTakeOverChime": 7,         # "Lane Assist: Please Take Over Steering" with chime
-  "laneAssistTakeOverSilent": 8,        # "Lane Assist: Please Take Over Steering" silent
-  "emergencyAssistChangingLanes": 9,    # "Emergency Assist: Changing lanes..." with urgent beep
-  "laneAssistDeactivated": 10,          # "Lane Assist deactivated." silent with persistent icon afterward
-}
-
-# Check the 7th and 8th characters of the VIN before adding a new CAR. If the
-# chassis code is already listed below, don't add a new CAR, just add to the
-# FW_VERSIONS for that existing CAR.
-# Exception: SEAT Leon and SEAT Ateca share a chassis code
 
 class CAR:
   AUDI_A5_B8 = "AUDI A5 B8"                         # Chassis 8T/8K, Audi A4/A5 B8/B8.5 and variants

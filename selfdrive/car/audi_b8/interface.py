@@ -53,7 +53,7 @@ class CarInterface(CarInterfaceBase):
     if candidate == CAR.AUDI_A5_B8:
       ret.mass = 1733 + STD_CARGO_KG
       ret.wheelbase = 2.84
-		
+
     else:
       raise ValueError("unsupported car %s" % candidate)
 

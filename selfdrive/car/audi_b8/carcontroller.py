@@ -86,19 +86,6 @@ class CarController():
       can_sends.append(volkswagencan.create_audi_b8_steering_control(self.packer_pt, CANBUS.pt, apply_steer,
                                                                  idx, hcaEnabled))
 
-    # **** HUD Controls ***************************************************** #
-
-    if frame % P.LDW_STEP == 0:
-      if visual_alert in [VisualAlert.steerRequired, VisualAlert.ldw]:
-        hud_alert = MQB_LDW_MESSAGES["laneAssistTakeOverSilent"]
-      else:
-        hud_alert = MQB_LDW_MESSAGES["none"]
-
-      can_sends.append(volkswagencan.create_audi_b8_hud_control(self.packer_pt, CANBUS.pt, enabled,
-                                                            CS.out.steeringPressed, hud_alert, left_lane_visible,
-                                                            right_lane_visible, CS.ldw_stock_values,
-                                                            left_lane_depart, right_lane_depart))
-
     # **** ACC Button Controls ********************************************** #
 
     # FIXME: this entire section is in desperate need of refactoring
