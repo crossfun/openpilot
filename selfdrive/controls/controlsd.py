@@ -202,7 +202,7 @@ class Controls:
     self.events.add_from_msg(CS.events)
     if not self.dp_jetson:
       self.events.add_from_msg(self.sm['driverMonitoringState'].events)
-    self.events.add_from_msg(self.sm['longitudinalPlan'].eventsDEPRECATED)
+#    self.events.add_from_msg(self.sm['longitudinalPlan'].eventsDEPRECATED)
 
     # Handle startup event
     if self.startup_event is not None:
@@ -263,7 +263,7 @@ class Controls:
         else:
           self.events.add(EventName.preLaneChangeRight)
     elif self.sm['lateralPlan'].laneChangeState in [LaneChangeState.laneChangeStarting,
-                                                    LaneChangeState.laneChangeFinishing]:
+                                                 LaneChangeState.laneChangeFinishing]:
       self.events.add(EventName.laneChange)
 
     if self.can_rcv_error or not CS.canValid:
@@ -562,8 +562,8 @@ class Controls:
       if len(lat_plan.dPathPoints):
         # Check if we deviated from the path
         # TODO use desired vs actual curvature
-        left_deviation = actuators.steer > 0 and lat_plan.dPathPoints[0] < -0.20
-        right_deviation = actuators.steer < 0 and lat_plan.dPathPoints[0] > 0.20
+        left_deviation = actuators.steer > 0 and lat_plan.dPathPoints[0] < -0.1
+        right_deviation = actuators.steer < 0 and lat_plan.dPathPoints[0] > 0.1
 
         if left_deviation or right_deviation:
           self.events.add(EventName.steerSaturated)
@@ -635,7 +635,7 @@ class Controls:
 
     clear_event = ET.WARNING if ET.WARNING not in self.current_alert_types else None
     alerts = self.events.create_alerts(self.current_alert_types, [self.CP, self.sm, self.is_metric, self.soft_disable_timer])
-    self.AM.add_many(self.sm.frame, alerts)
+    self.AM.add_many(self.sm.frame, alerts, self.enabled)
     self.AM.process_alerts(self.sm.frame, clear_event)
     CC.hudControl.visualAlert = self.AM.visual_alert
 
@@ -645,7 +645,7 @@ class Controls:
       self.pm.send('sendcan', can_list_to_can_capnp(can_sends, msgtype='sendcan', valid=CS.canValid))
 
     force_decel = False if self.dp_jetson else (self.sm['driverMonitoringState'].awarenessStatus < 0.) or \
-                    (self.state == State.softDisabling)
+                  (self.state == State.softDisabling)
 
     # Curvature & Steering angle
     params = self.sm['liveParameters']
