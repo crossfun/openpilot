@@ -1,7 +1,7 @@
 from cereal import car
 from selfdrive.car import apply_std_steer_torque_limits
 from selfdrive.car.audi_b8 import volkswagencan
-from selfdrive.car.audi_b8.values import DBC_FILES, CANBUS, MQB_LDW_MESSAGES, BUTTON_STATES, CarControllerParams as P
+from selfdrive.car.audi_b8.values import DBC_FILES, CANBUS, BUTTON_STATES, CarControllerParams as P
 from opendbc.can.packer import CANPacker
 from common.dp_common import common_controller_ctrl
 
